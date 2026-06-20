@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoundIt · Legal & Privacy</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f4f7fc;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      padding: 2rem 1rem;
+      color: #1e2a41;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 32px;
+      box-shadow: 0 20px 60px rgba(0, 20, 40, 0.08);
+      padding: 2.5rem 2.8rem;
+      transition: all 0.2s ease;
+    }
+    @media (max-width: 640px) {
+      .container {
+        padding: 1.8rem 1.2rem;
+      }
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #eef3f9;
+      padding-bottom: 1.6rem;
+      margin-bottom: 2.2rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .brand i {
+      font-size: 2.4rem;
+      color: #2563eb;
+      background: #e6edfe;
+      padding: 0.5rem;
+      border-radius: 18px;
+    }
+    .brand h1 {
+      font-weight: 600;
+      font-size: 2.2rem;
+      letter-spacing: -0.5px;
+      color: #0b1e3a;
+    }
+    .brand span {
+      font-weight: 300;
+      color: #4b5b7a;
+      font-size: 1rem;
+      margin-left: 0.2rem;
+    }
+    .badge {
+      background: #dce6f5;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1f3a6b;
+      letter-spacing: 0.3px;
+    }
+    .badge i {
+      margin-right: 6px;
+      color: #2563eb;
+    }
+    .section {
+      margin-bottom: 2.8rem;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0b1e3a;
+      margin-bottom: 1.2rem;
+      border-left: 5px solid #2563eb;
+      padding-left: 1rem;
+    }
+    .section-title i {
+      color: #2563eb;
+      font-size: 1.3rem;
+      width: 1.8rem;
+      text-align: center;
+    }
+    .card {
+      background: #f9fbfe;
+      border-radius: 20px;
+      padding: 1.6rem 2rem;
+      margin-top: 0.8rem;
+      border: 1px solid #eef3f9;
+      transition: 0.1s;
+    }
+    .card p, .card li {
+      line-height: 1.7;
+      color: #1e2f4a;
+    }
+    .card ul, .card ol {
+      padding-left: 1.8rem;
+      margin: 0.8rem 0;
+    }
+    .card li {
+      margin-bottom: 0.3rem;
+    }
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 700px) {
+      .grid-2col {
+        grid-template-columns: 1fr;
+      }
+    }
+    .highlight {
+      background: #eef4ff;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-weight: 500;
+      color: #1f3a75;
+    }
+    .data-badge {
+      display: inline-block;
+      background: #1e2a41;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      letter-spacing: 0.4px;
+      margin-right: 0.3rem;
+    }
+    .footer-note {
+      border-top: 1px solid #dce5f0;
+      margin-top: 2.5rem;
+      padding-top: 1.8rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      color: #4e6285;
+    }
+    .footer-note i {
+      color: #2563eb;
+      margin: 0 4px;
+    }
+    .terms-highlight {
+      background: #f0f4fe;
+      border-radius: 14px;
+      padding: 0.8rem 1.6rem;
+      margin: 1rem 0;
+      border-left: 4px solid #2563eb;
+    }
+    .intellectual-badge {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .intellectual-badge i {
+      font-size: 1.8rem;
+      color: #2563eb;
+      margin-top: 0.1rem;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e3eaf3;
+      margin: 1.8rem 0;
+    }
+    .small-note {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .app-name {
+      font-weight: 700;
+      color: #0b1e3a;
+    }
+    .collection-banner {
+      background: #e1e9fa;
+      border-radius: 30px;
+      padding: 0.25rem 1.2rem;
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1b3b77;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- header -->
+  <div class="header">
+    <div class="brand">
+      <i class="fas fa-compass"></i>
+      <h1>FoundIt <span>· lost & found</span></h1>
+    </div>
+    <div class="badge">
+      <i class="fas fa-shield-alt"></i> v2.4 · privacy first
+    </div>
+  </div>
+
+  <!-- ========== PRIVACY POLICY ========== -->
+  <div class="section">
+    <div class="section-title">
+      <i class="fas fa-user-lock"></i>
+      <span>Privacy Policy</span>
+    </div>
+    <div class="card">
+      <p><strong>Last updated:</strong> June 2026</p>
+      <p style="margin-top: 0.5rem;">FoundIt (“we”, “our”, “us”) respects your privacy. This policy explains how we collect, use, and protect your personal data when you use our Flutter mobile application.</p>
+      <div style="margin: 1.2rem 0 0.8rem 0;">
+        <span class="collection-banner"><i class="fas fa-database"></i> Data we collect</span>
+      </div>
+      <ul>
+        <li><span class="highlight"><i class="fas fa-user"></i> Full name</span> — to personalise your account and lost item reports.</li>
+        <li><span class="highlight"><i class="fas fa-envelope"></i> Email address</span> — for account verification, password recovery, and service updates.</li>
+        <li><span class="highlight"><i class="fas fa-phone-alt"></i> Phone number</span> — to enable direct contact between finders and owners, and for two-factor authentication.</li>
+      </ul>
+      <div style="margin-top: 1.2rem;">
+        <p><i class="fas fa-check-circle" style="color: #2563eb;"></i> <strong>How we use your data:</strong></p>
+        <ul>
+          <li>Create and manage your FoundIt account.</li>
+          <li>Match lost & found items and facilitate secure communication.</li>
+          <li>Send important notifications (e.g., item matches, privacy updates).</li>
+          <li>Improve app performance and safety (anonymised analytics).</li>
+        </ul>
+      </div>
+      <div style="margin-top: 1.2rem; background: #edf3fe; padding: 0.8rem 1.2rem; border-radius: 16px;">
+        <i class="fas fa-user-shield" style="color: #2563eb; margin-right: 8px;"></i>
+        <strong>Data protection:</strong> We use encryption (TLS) and secure storage. Your phone number is only visible to other users when you explicitly respond to a found item.
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CONFIDENTIALITY ========== -->
+  <div class="section">
+    <div class="section-title">
+      <i class="fas fa-file-signature"></i>
+      <span>Confidentiality</span>
+    </div>
+    <div class="card">
+      <p><i class="fas fa-lock" style="color: #2563eb; margin-right: 8px;"></i> FoundIt treats your personal information as confidential. We do not sell, rent, or trade your data with third parties for marketing purposes.</p>
+      <ul style="margin-top: 0.8rem;">
+        <li><strong>Internal access:</strong> Only authorised personnel with a need-to-know basis can access personal data (e.g., support team).</li>
+        <li><strong>Third-party sharing:</strong> We share data only with trusted service providers (cloud hosting, push notifications) that comply with strict confidentiality obligations.</li>
+        <li><strong>Anonymisation:</strong> Aggregated, non-identifiable data may be used for research and analytics.</li>
+      </ul>
+      <div class="terms-highlight" style="margin-top: 1rem;">
+        <i class="fas fa-gavel" style="margin-right: 10px;"></i> We enforce confidentiality by contract and technical measures. Any breach is subject to investigation and legal action.
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== TERMS & CONDITIONS + DATA PROTECTION ========== -->
+  <div class="section">
+    <div class="section-title">
+      <i class="fas fa-file-contract"></i>
+      <span>Terms & Conditions</span>
+    </div>
+    <div class="card">
+      <p><strong>Acceptance of Terms</strong><br>By using FoundIt, you agree to these terms. If you do not agree, please refrain from using the app.</p>
+      <ul>
+        <li><strong>User accounts:</strong> You must provide accurate full name, email, and phone number. You are responsible for maintaining the confidentiality of your login credentials.</li>
+        <li><strong>Lost & found listings:</strong> You agree to provide truthful information. FoundIt is a platform for connecting people; we are not responsible for the condition or ownership of items.</li>
+        <li><strong>Prohibited uses:</strong> You may not use FoundIt for any unlawful or fraudulent activity, or to harass others.</li>
+        <li><strong>Termination:</strong> We reserve the right to suspend or terminate accounts that violate these terms.</li>
+      </ul>
+      <hr>
+      <div style="display: flex; align-items: center; gap: 10px; margin: 0.5rem 0 0.2rem 0;">
+        <i class="fas fa-database" style="color: #2563eb; font-size: 1.3rem;"></i>
+        <span style="font-weight: 600; font-size: 1.1rem;">Data Protection (GDPR & CCPA compliant)</span>
+      </div>
+      <ul>
+        <li><strong>Lawful basis:</strong> We process your data based on your consent (when you sign up) and for the performance of the service (matching items).</li>
+        <li><strong>Data retention:</strong> We retain your data as long as your account is active, and for a reasonable period thereafter as required by law.</li>
+        <li><strong>Your rights:</strong> You may access, correct, or delete your personal data at any time via the app settings or by contacting us.</li>
+        <li><strong>Data security:</strong> We implement encryption, secure access controls, and regular security reviews.</li>
+      </ul>
+      <div style="background: #e9eff9; border-radius: 14px; padding: 0.8rem 1.2rem; margin-top: 1rem;">
+        <i class="fas fa-shield-halved" style="color: #2563eb;"></i> 
+        <strong>Data breach:</strong> In the unlikely event of a breach, we will notify affected users and authorities within 72 hours as required by applicable law.
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== INTELLECTUAL PROPERTY RIGHTS ========== -->
+  <div class="section">
+    <div class="section-title">
+      <i class="fas fa-copyright"></i>
+      <span>Intellectual Property Rights</span>
+    </div>
+    <div class="card intellectual-badge">
+      <div style="flex:1;">
+        <p><i class="fas fa-code" style="color: #2563eb; margin-right: 8px;"></i> All content, design, source code, graphics, and trademarks in FoundIt are the exclusive property of FoundIt or its licensors.</p>
+        <ul style="margin-top: 0.8rem;">
+          <li><strong>App & software:</strong> The Flutter application, UI/UX, and backend logic are protected by copyright and trade secret laws.</li>
+          <li><strong>Trademarks:</strong> “FoundIt”, the compass logo, and related marks are registered trademarks.</li>
+          <li><strong>User content:</strong> You retain ownership of the content you submit (photos, descriptions), but grant FoundIt a worldwide, non-exclusive license to display and promote your listings within the app.</li>
+          <li><strong>Restrictions:</strong> You may not reverse-engineer, copy, or redistribute any part of the app without explicit written permission.</li>
+        </ul>
+        <div class="terms-highlight" style="margin: 1.2rem 0 0.2rem 0;">
+          <i class="fas fa-balance-scale"></i> All intellectual property disputes will be governed by the laws of [Your Jurisdiction].
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== ADDITIONAL: FULL DATA COLLECTION SUMMARY ========== -->
+  <div class="section">
+    <div class="section-title" style="border-left-color: #4b7bec;">
+      <i class="fas fa-list-ul"></i>
+      <span>Data collection summary</span>
+    </div>
+    <div class="card" style="background: #f2f6fe;">
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between;">
+        <div>
+          <span class="data-badge"><i class="fas fa-user"></i> Full name</span>
+          <span class="data-badge"><i class="fas fa-envelope"></i> Email</span>
+          <span class="data-badge"><i class="fas fa-phone"></i> Phone</span>
+        </div>
+        <div style="color: #1e3a6b;">
+          <i class="fas fa-check-circle" style="color: #2563eb;"></i> Collected at registration · used for identity & safety
+        </div>
+      </div>
+      <p style="margin-top: 0.8rem; font-size: 0.95rem;">
+        <i class="fas fa-info-circle" style="color: #2563eb;"></i> You can update or delete your data any time in the app's settings. We never store sensitive data like payment details or location history without explicit consent.
+      </p>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER / CONTACT ========== -->
+  <div class="footer-note">
+    <div>
+      <i class="fas fa-envelope"></i> privacy@foundit.app · 
+      <i class="fas fa-phone-alt"></i> +260 964 099 160‑FOUND
+    </div>
+    <div>
+      <i class="fas fa-file-pdf"></i> v2.4 · effective June 2026
+    </div>
+    <div>
+      <i class="fas fa-shield"></i> FoundIt · lost & found
+    </div>
+  </div>
+  <div style="margin-top: 0.6rem; font-size: 0.8rem; color: #6a7f9f; text-align: center; border-top: 1px solid #e0e8f2; padding-top: 0.8rem;">
+    <i class="fas fa-flask"></i> FoundIt is a Flutter‑powered lost & found platform. By using the app, you accept all policies above.
+  </div>
+</div>
+</body>
+</html>
